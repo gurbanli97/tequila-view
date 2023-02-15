@@ -1,0 +1,42 @@
+.company {
+  h2 {
+    display: block;
+    font-size: 16px;
+    color: $basic-7;
+    margin-bottom: 32px;
+  }
+
+  .page-header {
+    .edit {
+      padding: 10px 16px;
+      background-color: $basic-4;
+      color: $dark-2;
+      line-height: 20px;
+      font-weight: 600;
+      border-radius: 4px;
+
+      i {
+        margin-right: 16px;
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .company-details {
+    &::after {
+      content: '';
+      display: block;
+      margin: 32px 0;
+      height: 1px;
+      width: 100%;
+      background-color: $basic-4;
+    }
+  }
+
+  &.edit {
+    button {
+      margin-top: 24px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 124px;
+
+  img {
+    width: 333px;
+  }
+
+  h2 {
+    margin-top: 56px;
+    margin-bottom: 24px;
+    color: $basic-7;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  p {
+    margin-bottom: 56px;
+    color: $basic-7;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  button {
+    border-color: $basic-7;
+    color: $basic-7;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

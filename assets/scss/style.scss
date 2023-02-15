@@ -1,0 +1,41 @@
+// // Core
+
+@import "variables";
+@import "fonts";
+@import "icons";
+@import "default";
+
+// Layout
+
+@import "layout/sidebar";
+@import "layout/page-header";
+
+// Elements
+@import "elements/form-modal";
+@import "elements/delete-modal";
+@import "elements/slide-out";
+@import "elements/buttons";
+@import "elements/tables";
+@import "elements/tabs";
+@import "elements/badges";
+@import "elements/fullcalendar";
+@import "elements/dark-switch";
+@import "elements/detail-field";
+
+// Form
+
+@import "form/input";
+@import "form/select";
+@import "form/datepicker";
+@import "form/dropzone";
+@import "form/textarea";
+@import "form/attachment";
+
+// Pages
+@import "pages/login";
+@import "pages/registration";
+@import "pages/404";
+@import "pages/company";
+@import "pages/solutions";
+@import "pages/payouts";
+@import "pages/widgets";

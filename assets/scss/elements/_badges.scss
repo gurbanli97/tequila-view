@@ -1,0 +1,36 @@
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 0;
+  max-width: 100px;
+  width: 100%;
+  border-radius: 4px;
+  font-weight: 500;
+  line-height: 32px;
+
+  &.badge-success {
+    background-color: $success-6;
+    color: $success-6 !important;
+  }
+
+  &.badge-light {
+    background-color: $white;
+    color: #7b61ff !important;
+  }
+
+  &.badge-danger {
+    background-color: $danger-5;
+    color: $danger-5 !important;
+  }
+
+  &.badge-warning {
+    background-color: $warning-5;
+    color: $warning-5 !important;
+  }
+
+  &.badge-info {
+    background-color: $greenland;
+    color: $greenland !important;
+  }
+}

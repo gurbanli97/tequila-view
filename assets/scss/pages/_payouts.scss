@@ -1,0 +1,25 @@
+.payouts {
+  .payouts-inner {
+    .table-responsive {
+      .status-field {
+          display: flex;
+          align-items: center;
+
+          i {
+            margin-right: 8px;
+            font-size: 16px;
+          }
+
+          &.status-pending {
+            color: $warning-5;
+          }
+          &.status-done {
+            color: $greenland;
+          }
+          &.status-cancelled {
+            color: $danger-5;
+          }
+      }
+    }
+  }
+}

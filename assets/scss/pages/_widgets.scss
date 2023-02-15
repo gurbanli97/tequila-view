@@ -1,0 +1,209 @@
+.widgets {
+  .widgets-inner {
+    .table-responsive {
+      .actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button {
+          &:first-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.widgets.create {
+  .page-header {
+    .btn-preview {
+      width: 118px;
+      height: 40px;
+      background: #EDF1F7;
+      border: 1px solid #8F9BB3;
+      border-radius: 4px;
+      color: #222B45;
+    }
+    .btn-code {
+      width: 118px;
+      height: 40px;
+      background: #EDF1F7;
+      border: 1px solid #189CA9;
+      border-radius: 4px;
+      color: #222B45;
+    }
+  }
+  .widgets-create-inner {
+    .create-widget-forms {
+      & > div:not(:last-child) {
+        margin-bottom: 12px;
+      }
+      .create {
+        padding: 24px 24px 42px 24px;
+        background: #fff;
+        border-radius: 8px;
+        .head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          & > div {
+            display: flex;
+            align-items: center;
+            span {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+              border-radius: 50%;
+              background: #EDF1F7;
+            }
+
+            h3 {
+              margin-left: 12px;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+              color: #2E3A59;
+            }
+          }
+          button {
+            padding: 8px;
+            background: #EDF1F7;
+            border: 1px solid #189CA9;
+            border-radius: 4px;
+            width: 67px;
+            height: 32px;
+            color: #222B45;
+          }
+        }
+        .body {
+          .form-control {
+            margin-top: 44px;
+          }
+        }
+      }
+    }
+
+    .create.type {
+      .body {
+        margin-top: 60px;
+        padding-left: 38px;
+      }
+      .widget-type.full {
+        span {
+          display: inline-block;
+          margin-bottom: 16px;
+        }
+        & > div {
+         cursor: pointer;
+          border: 1px solid transparent;
+          border-radius: 6px;
+          max-width: 156px;
+          height: 150px;
+         
+          &.selected {
+            img {
+              border: 2px solid $greenland;
+              border-radius: 6px;
+            }
+          }
+
+          img {
+            object-fit: cover;
+            width: 100%;
+          }
+        }
+      }
+      .widget-type.price {
+        span {
+          display: inline-block;
+          margin-bottom: 16px;
+        }
+        & > div {
+          cursor: pointer;
+          border: 1px solid transparent;
+          max-width: 156px;
+          height: 150px;
+         
+          &.selected {
+            img {
+              border: 2px solid $greenland;
+              border-radius: 6px;
+
+            }
+          }
+          img {
+            object-fit: cover;
+            width: 100%;
+          }
+        }
+      }
+      .widget-type.horizontal {
+        span {
+          display: inline-block;
+          margin-bottom: 16px;
+        }
+
+        & > div {
+          max-width: 334px;
+          height: 76px;
+          cursor: pointer;
+          border: 1px solid transparent;
+          border-radius: 4px;
+        
+          &.selected {
+            img {
+              border: 2px solid $greenland;
+              border-radius: 6px;
+            }
+          }
+          img {
+            object-fit: cover;
+            width: 100%;
+          }
+        }
+        
+      }
+    }
+
+    .create.colors {
+      h4 {
+        margin-top: 34px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #2E3A59;
+      }
+      .color-picker {
+        max-width: 320px;
+        height: 48px;
+        padding: 14px 0 14px 16px;
+        background: #F7F9FC;
+        border: 1px solid #E4E9F2;
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+
+
+        input {
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+        }
+
+        &::after {
+          content: '';
+          display: inline-block;
+          background: url('/images/magicpen.svg');
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          right: 12px;
+        }
+      }
+    }
+  }
+}

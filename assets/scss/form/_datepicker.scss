@@ -1,0 +1,131 @@
+$default-color: #555;
+$primary-color: #1284e7;
+
+@import "~vue2-datepicker/scss/index";
+
+.mx-datepicker {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 48px;
+  border: 1px solid #c0c5ea;
+  border-radius: 8px;
+  background: #f7f9fc;
+  color: $dark-2;
+  font-size: 13px;
+  line-height: 16px;
+  cursor: pointer !important;
+
+  &.is-invalid {
+    border: 1px solid $danger-5;
+  }
+
+  &.is-invalid::after {
+    color: $danger-5;
+  }
+
+  &::after {
+    content: "\e903";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    color: $basic-7;
+    font-family: icomoon !important;
+    font-size: 20px;
+    transform: translateY(-50%);
+  }
+
+  .mx-input-wrapper {
+    width: 100%;
+  }
+
+  input {
+    padding: 0 12px 0 16px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: none;
+    background: transparent;
+    cursor: pointer !important;
+    pointer-events: none;
+
+    &::placeholder {
+      color: #8f9bb3;
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+
+  .mx-input-wrapper .mx-icon-clear,
+  .mx-input-wrapper .mx-icon-calendar {
+    display: none;
+  }
+
+  .mx-input-wrapper:hover .mx-icon-clear + .mx-icon-calendar {
+    display: none;
+  }
+}
+
+.datepicker-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: $basic-7;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+// .datepicker {
+//     position: absolute;
+//     min-width: 300px;
+//     max-width: 300px;
+//     z-index: 1;
+// }
+// .v-picker__title.primary {
+//     background-color: #1867c0 !important;
+//     border-color: #1867c0 !important;
+// }
+
+// .v-date-picker-table__current {
+//     color: #005caf !important;
+//     caret-color: #005caf !important;
+// }
+
+// .v-date-picker-table .v-btn.v-btn--active {
+//     color: red !important;
+// }
+
+// .v-application .accent {
+//     background-color: transparent !important;
+//     border-color: transparent !important;
+// }
+
+// .theme--light.v-card {
+//     border: 1px solid #1867c0 !important;
+//     background-color: #eee !important;
+// }
+
+// .datepicker-wrap {
+//     width: 100%;
+//     max-width: 246px;
+//     height: 40px;
+//     position: relative;
+//     border: 1px solid #C0C5EA;
+//     box-sizing: border-box;
+//     border-radius: 8px;
+//     cursor: pointer;
+//     padding: 12px 0 12px 16px;
+//     color: $dark-2;
+//     font-size: 13px;
+//     line-height: 16px;
+//     background: #F7F9FC;
+//     i {
+//         position: absolute;
+//         top: 50%;
+//         right: 10px;
+//         transform: translateY(-50%);
+//         color: $basic-7;
+//     }
+// }

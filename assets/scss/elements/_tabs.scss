@@ -1,0 +1,82 @@
+.tabs {
+  padding-top: 20px;
+
+  .nav-tabs {
+    border-bottom: 1px solid $basic-4;
+
+    .nav-item:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    .nav-link {
+      padding-bottom: 16px;
+      padding-left: 8px;
+      border: none;
+      border-bottom: 2px solid transparent;
+      color: $basic-7;
+      font-size: 14px;
+      line-height: 20px;
+
+      &.active {
+        border-color: $greenland;
+        color: $greenland;
+      }
+    }
+  }
+}
+
+.order-details_inner {
+  .application-form_tab:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    height: 40px;
+    border: 1px solid $greenland;
+    border-radius: 8px;
+    background: #fff;
+    transition: all .2s linear;
+    cursor: pointer;
+
+    &::before {
+      content: "\e909";
+      display: inline-flex;
+      margin-right: 12px;
+      color: $greenland;
+      font-family: icomoon, !important;
+      font-size: 20px;
+    }
+
+    a {
+      padding: 0;
+      border: none;
+      color: $greenland;
+      font-size: 14px;
+      line-height: 16px;
+
+      &.active {
+        border: none;
+        background-color: inherit;
+        color: $greenland;
+      }
+    }
+
+    &:hover {
+      background-color: $greenland;
+
+      &::before {
+        color: $white;
+      }
+
+      a {
+        color: $white;
+
+        &.active {
+          border: none;
+          background-color: transparent;
+          color: $white;
+        }
+      }
+    }
+  }
+}

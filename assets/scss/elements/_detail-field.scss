@@ -1,0 +1,21 @@
+.detail-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 192px;
+
+  span {
+    margin-bottom: 4px;
+    color: $basic-6;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+
+  strong {
+    color: $basic-7;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+}
