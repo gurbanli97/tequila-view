@@ -1,4 +1,4 @@
-# tequila-admin
+# tequila-view
 
 ## Build Setup
 
