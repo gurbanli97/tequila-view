@@ -67,7 +67,7 @@ export default {
   axios: {
     // Do away with the baseUrl when using proxy
     proxy: false,
-    // baseURL: 'https://develop--strong-torrone-c9f524.netlify.app',
+    baseURL: 'https://develop--strong-torrone-c9f524.netlify.app',
     proxyHeaders: false,
     credentials: false
   },
