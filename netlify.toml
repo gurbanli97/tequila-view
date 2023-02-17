@@ -6,7 +6,11 @@
 
 
 [[redirects]]
-from = "/*"
+from = "/"
 to = "/index.html"
+status = 200
 
+[[redirects]]
+from = "/deeplinks"
+to = "/deeplinks/index.html"
 status = 200
