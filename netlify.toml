@@ -3,3 +3,10 @@
 
 [start]
   command = "npm run start"
+
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+
+status = 200
