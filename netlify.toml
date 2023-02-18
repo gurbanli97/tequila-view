@@ -2,4 +2,8 @@
   command = "npm run build"
   publish = ".nuxt/dist"
   functions = "functions"
-
+  
+[[redirects]]
+  from = "/*"
+  to = "/server/index.ssr.html"
+  status = 200
