@@ -1,9 +1,9 @@
 [build]
   command = "npm run build"
-  publish = ".nuxt/dist"
+  publish = "/dist"
   functions = "functions"
   
 [[redirects]]
   from = "/*"
-  to = "/server/index.ssr.html"
+  to = "/index.html"
   status = 200
