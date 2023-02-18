@@ -5,5 +5,5 @@
   
 [[redirects]]
   from = "/*"
-  to = "/server/index.spa.html"
+  to = "/server/index.ssr.html"
   status = 200

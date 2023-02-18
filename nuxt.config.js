@@ -33,12 +33,12 @@ export default {
   components: true,
 
   ssr: true,
-  serverMiddleware: [
-    {
-      path: '/api',
-      handler: '~/api'
-    }
-  ],
+  // serverMiddleware: [
+  //   {
+  //     path: '/api',
+  //     handler: '~/api'
+  //   }
+  // ],
   generate: {
     fallback: true
   },
