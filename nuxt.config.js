@@ -32,6 +32,17 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
+  ssr: true,
+  serverMiddleware: [
+    {
+      path: '/api',
+      handler: '~/api'
+    }
+  ],
+  generate: {
+    fallback: true
+  },
+
   router: {
     linkActiveClass: 'link-active',
     linkExactActiveClass: 'exact-active',
