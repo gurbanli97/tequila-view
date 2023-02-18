@@ -1,37 +1,24 @@
-const { Nuxt } = require('nuxt-start')
+const { loadNuxt } = require('nuxt-start');
 
-const nuxtConfig = require('../nuxt.config.js')
-const nuxt = new Nuxt({ ...nuxtConfig, dev: false })
+exports.handler = async (event, context) => {
+  const nuxt = await loadNuxt({ rootDir: './dist' });
 
-exports.handler = async function (event, context) {
   const { html, error, redirected } = await nuxt.renderRoute(event.path, {
     req: event,
     res: {
-      setHeader: () => {}
-    }
-  })
-
-  if (error) {
-    return {
-      statusCode: 500,
-      body: error.message
-    }
-  }
-
-  if (redirected) {
-    return {
-      statusCode: 301,
-      headers: {
-        Location: redirected.path
-      }
-    }
-  }
+      setHeader: () => {},
+      writeHead: () => {},
+      write: () => {},
+      end: () => {},
+    },
+  });
 
   return {
-    statusCode: 200,
-    body: html,
+    statusCode: error ? 500 : redirected ? 301 : 200,
     headers: {
-      'Content-Type': 'text/html'
-    }
-  }
-}
+      'Content-Type': 'text/html',
+      'Cache-Control': 'public, max-age=3600',
+    },
+    body: html,
+  };
+};
