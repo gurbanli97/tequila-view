@@ -32,8 +32,6 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  target: 'server',
-
   router: {
     linkActiveClass: 'link-active',
     linkExactActiveClass: 'exact-active',
@@ -66,7 +64,7 @@ export default {
   axios: {
     // Do away with the baseUrl when using proxy
     proxy: true,
-    // baseURL: 'https://develop--strong-torrone-c9f524.netlify.app',
+    // baseURL: 'https://api.affiliate.pickvisa.com',
     proxyHeaders: false,
     credentials: false
   },
@@ -81,7 +79,10 @@ export default {
     '/api2/': {
       target: 'https://combinations.pickvisa.com',
       pathRewrite: { '/api2/': '/api/' },
-      changeOrigin: true
+      changeOrigin: true,
+      headers: {
+        Authorization: 'Token 08582a913f9d27ba7124645843ec2d3ad121597a'
+      }
     },
   },
 
@@ -135,5 +136,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+      extend(config, ctx) {
+        config.module.rules.push({
+          test: /_redirects$/,
+          loader: 'file-loader',
+          options: {
+            name: '_redirects',
+          },
+        })
+      }
   }
 }
