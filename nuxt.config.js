@@ -83,16 +83,16 @@ export default {
   proxy: {
     // Simple proxy
     '/api/': {
-      target: 'https://api.affiliate.pickvisa.com',
+      target: 'https://api.affiliate',
       // pathRewrite: { '^api/': '' },
       changeOrigin: true
     },
     '/api2/': {
-      target: 'https://combinations.pickvisa.com',
+      target: 'https://combinations',
       pathRewrite: { '/api2/': '/api/' },
       changeOrigin: true,
       headers: {
-        Authorization: 'Token 08582a913f9d27ba7124645843ec2d3ad121597a'
+        Authorization: 'Token'
       }
     },
   },
