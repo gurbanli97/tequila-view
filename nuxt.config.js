@@ -75,7 +75,6 @@ export default {
   axios: {
     // Do away with the baseUrl when using proxy
     proxy: true,
-    // baseURL: 'https://api.affiliate.pickvisa.com',
     proxyHeaders: false,
     credentials: false
   },
